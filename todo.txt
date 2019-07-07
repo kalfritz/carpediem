@@ -1,0 +1,71 @@
+
+>>>> Users Controllers
+    .index
+    .register
+    .auth
+    xforget password
+    xroles
+
+>>>> Posts Controllers
+    .index
+    .getOne
+    .store
+    xedit
+    xdelete
+    xactually saving every edit and the date that it was written with   $currentDate
+    xuploadImages
+
+>>> Comments Controllers
+    .index
+    .getCommentsOfAPost
+    .store
+    xedit
+    xdelete
+
+>>> LIKES ON POSTS AND COMMENTS PERFECTLY MADE!
+
+>>>> DEAL WITH FRIENDS. DONT FORGET ABOUT THE ADD TO SET = I DONT.
+Just have to fix the followerCount problem...... 
+ps: for the like controller one worked just fine because it was only a endpoint.
+ but for the follow and unfollow one i wanted to split them in two unique endpoints
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ DO TOMORROW AND SATURDAY: 
+:D EDIT AND DELETE POSTS AND COMMENTS.........
+:D MAKE A QUERY TO ONLY FETCH POSTS MADE MY PEOPLE FOLLOWED BY THE USER 
+:D PROFILE INFO..... (GITHUB FB TWITTER) ps: i dont like the fact that it adds an id but whatever
+:D SEARCH FOR POSTS WITH A LOT OF LIKES (TRENDS)
+:D ADD FUCKING HASHTAGS YEEEEEAH IT WILL BE COOL (SUITS BETTER WITH AN ARRAY RIGHT? UR RIGHT DUDE)
+ OOOH YEAH TRY TO IMPLEMENT GROUPS TOO. IT WILL BE PRETTY FUN ! AHAHAHA
+ THATS A LOT OF THINGS BUT I WILL BE FUCKING PROUD OF MYSELF IF I CAN DO THAT
+ <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+TRY TO WORK ON FRONTEND AS SOON AS POSSIBLE SO YOU CAN GET MORE MOTIVATED. LETS GO!!!!!!!!!!!!!
+
+THE OP CAN DELETE COMMENTS OF HIS POSTS
+
+
+  .sort('-createdAt')
+      .populate('user')
+      .populate({
+        path: 'comments',
+        options: {
+          limit: 2,
+          sort: { createdAt: -1 },
+        },
+      });
+
+
+      TEST THE EDIT FUNCTION EDITING THE 10TH POST MADE MY BEAR AHSUHASU
+
+
+
+
+      AN UNIQUE POST MODEL THAT STORES BOTH TIMELINE AND GROUP POSTS OR TWO DIFFERENT MODELS???
+
+      UNIQUE:
+
+      CONTEXT : timeline || GROUP
+
+      TODO:
+      DELETE ALL GPOSTS WHEN A GROUP IS DELETED.
